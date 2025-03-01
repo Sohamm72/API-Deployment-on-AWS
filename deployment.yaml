@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-weather
+  labels:
+    app: fastapi-weather
+spec:
+  replicas: 2  # Number of pods
+  selector:
+    matchLabels:
+      app: fastapi-weather
+  template:
+    metadata:
+      labels:
+        app: fastapi-weather
+    spec:
+      containers:
+        - name: fastapi-weather
+          image: <your-aws-ecr-url>/fastapi-weather:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: ENVIRONMENT
+              value: "production"
