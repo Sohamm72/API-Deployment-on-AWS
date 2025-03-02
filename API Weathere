@@ -1,7 +1,0 @@
-
-
-app = FastAPI()
-
-@app.get("/weather")
-def get_weather():
-    return {"temperature": "25°C", "condition": "Sunny"}
