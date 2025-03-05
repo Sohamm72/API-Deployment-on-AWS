@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: fastapi-weather-service
 spec:
-  type: LoadBalancer  # Exposes your API publicly
+  type: LoadBalancer  
   selector:
     app: fastapi-weather
   ports:
     - protocol: TCP
-      port: 80   # Exposed port
-      targetPort: 8000  # The container’s port
+      port: 80   
+      targetPort: 8000  
