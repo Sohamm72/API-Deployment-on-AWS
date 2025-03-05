@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fastapi-weather
-          image: <your-aws-ecr-url>/fastapi-weather:latest
+          image: <http://fastapi-weather:8000>/fastapi-weather:latest
           ports:
             - containerPort: 8000
           env:
