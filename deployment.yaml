@@ -5,7 +5,7 @@ metadata:
   labels:
     app: fastapi-weather
 spec:
-  replicas: 2  # Number of pods
+  replicas: 2 
   selector:
     matchLabels:
       app: fastapi-weather
